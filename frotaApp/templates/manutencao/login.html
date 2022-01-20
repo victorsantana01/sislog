@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Login</title>
+    <!--Cabeçalho Para Materialize-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Materialize Icones -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Materialize CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static  '/css/materialize.css' %}">
+
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+    <!--FIM Cabeçalho Para Materialize-->
+    <script>
+
+        var classApi = new classApi;
+        var conectBd = classApi.conectBd(1);
+    </script>
+</head>
+
+<body class="background #eeeeee grey lighten-3">
+    <div class="navbar-fixed z-depth-5">
+
+        <nav class="white">
+
+            <div class="nav-wrapper">
+                &nbsp;&nbsp;<a href="login.jsp" class="brand-logo right-aligned"><img class="responsive-img"
+                        src="img/logoNortetracM.png" alt="" /></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+                    <li class="left-align"><a href="https://mail.google.com/mail/u/0/?ogbl"><b
+                                class="center-align  waves-effect black-text">GMAIL</b></a></li>
+
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+    <!-- INICIO Botão de Add -->
+    <div class="fixed-action-btn  click-to-toggle " style="bottom: 35px; right: 45px;">
+        <a class="btn-floating z-depth-5 #4db6ac teal lighten-0 btn-large waves-effect z-depth-4">
+            <i class="material-icons">add</i></a>
+
+        <ul>
+            <li><a href="lista.html"
+                    class="btn-floating z-depth-5 #4db6ac teal lighten-3 btn-large waves-effect z-depth-4">
+                    <i class="material-icons">directions_run</i>clolse</a>
+            </li>
+
+
+        </ul>
+    </div>
+    <!-- FIM Botão de Add -->
+    <!--INICIO do Corpo do App -->
+    <div class=" container "><br>
+
+
+        <div class="row" id="formDiv">
+            <div class="container ">
+                <form name="login" class="col s6 offset-s3" method="post" action="login2.jsp">
+                    <b>
+                        <h5 class="offset-s3 center"><b>SIS LOG</b></h5>
+                    </b>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="user" type="text" name="user" class="validate" placeholder="Usuario" required>
+
+                        </div>
+                    </div>
+
+                    <div class="row center-on-small-only">
+                        <div class="input-field col s12 center-on-small-only">
+                            <input id="senha" name="senha" type="password"
+                                class="validate center-on-small-only z-depth-4" placeholder="Senha">
+
+                        </div>
+                    </div>
+                    <div class="center">
+                        <button class="btn waves-effect waves-light z-depth-5  #455a64 blue-grey darken-2 "
+                            type="submit" name="action">Entrar
+                            <i class="material-icons right">send</i>
+                        </button>
+
+
+                    </div>
+
+                    <!--#455a64 blue-grey darken-2-->
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--FIM do Corpo do App -->
+    <script type="text/javascript">
+        function confirma(form) {
+            form.submit();
+            return false;
+        }
+    </script>
+    <!--Materialize Jquery -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <!--Materialize JS -->
+    <script src="{% static '/js/materialize.js' %}"></script>
+    <!--Materialize INICIALIZA o menu para Mobile -->
+    <script>
+        $(".button-collapse").sideNav();
+    </script>
+</body>
+
+</html>

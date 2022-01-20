@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Manutencao.views import *
+from frotaApp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('teste/', current_datetime ),
     path('home/', home ),
+    path('login/', login ),
 ]

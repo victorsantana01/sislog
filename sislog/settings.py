@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Manutencao',
+    'frotaApp',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'sislog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'django_teste',
+        'NAME': 'bd_sislog',
         'USER': 'root',
         'PASSWORD': 'auto.sup',
         'Host': 'localhost',   # Or an IP Address that your DB is hosted on
